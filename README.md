@@ -43,6 +43,25 @@ By knowing these things about the message we can come to the following conclusio
 - A receiver knows the position from which each message has come
 - A receiver has no idea who has sent the message
 - Sender can't choose who he sends the message
-- All persons in line of sight receive the message
+- All robots in line of sight receive the message
 
-### Step 1: Telling the address
+
+## Step 1: Telling the address
+
+### Primary Aims:
+
+Any message sent must have two things.
+- From address
+- To address
+
+In computer messages we use ip address to say from and to address and router  
+sends to the correct device accordingly. But here there is no routers though  
+we are trying to design one as we are not interested in changing the core of  
+ARGoS. So we will settle to switches.
+
+So how does a basic primitive switch works. Every message which has the address  
+of the destination is sent to every device. A device picks a message if the  
+destination address mentioned in the message matches with it's own address. If  
+the message is meant to be a broadcast all devices will respond to the message.
+
+This is what we will try to simulate in this experiment.
