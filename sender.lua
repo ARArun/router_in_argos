@@ -25,5 +25,5 @@ function send_message()
     index = 1
     message = 2
     robot.range_and_bearing.set_data(index, message)
-    log("I'm sending: " .. message)
+    log("sender sending: " .. message)
 end

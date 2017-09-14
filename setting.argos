@@ -38,7 +38,7 @@
             <sensors>
                 <differential_steering implementation="default" />
                 <footbot_proximity implementation="default" show_rays="false" />
-                <range_and_bearing implementation="medium" medium="rab" show_rays="true" />
+                <range_and_bearing implementation="medium" medium="rab" show_rays="false" />
             </sensors>
             <params script="receiver.lua" />
         </lua_controller>
@@ -105,7 +105,7 @@
     <!-- * Visualization * -->
     <!-- ****************** -->
     <visualization>
-        <qt-opengl>
+        <qt-opengl lua_editor="true">
             <camera>
                 <placement idx="1" position="-0.5,0,0.5" look_at="0,0,0" lens_focal_length="20" />
             </camera>
