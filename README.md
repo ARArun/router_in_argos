@@ -8,15 +8,15 @@
 
 ## Message
 
-Before we decide how to design the communication system we have to  
+  Before we decide how to design the communication system we have to  
 understand the message we need to send.  
-Message has four parts
+
+### Message has these four parts
 1. data
 2. range
 3. horizontal_bearing
 4. vertical_bearing  
 
-Every message sent using range_and_bearing has the following four parts
 ### data  
 
 It is table of ten byte size table. To say simple c++ vocabulary. It is an
