@@ -8,8 +8,8 @@
 
 ## Message
 
-  Before we decide how to design the communication system we have to  
-understand the message we need to send.  
+ Before we decide how to design the communication system we have to understand  
+ the message we need to send.  
 
 ### Message has these four parts
 1. data
