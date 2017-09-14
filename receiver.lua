@@ -29,6 +29,6 @@ end
 function receive_message()
     if robot.range_and_bearing[1].data then
         message = robot.range_and_bearing[1].data
-        log("receiver receiving: " .. message[1])
+        log("receiver receiving: " .. message[2])
     end
 end

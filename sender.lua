@@ -22,7 +22,7 @@ end
 
 -- sends the message "2" via range and bearing
 function send_message()
-    index = 1
+    index = 2
     message = 2
     robot.range_and_bearing.set_data(index, message)
     log("sender sending: " .. message)
