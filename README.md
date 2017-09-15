@@ -65,3 +65,24 @@ destination address mentioned in the message matches with it's own address. If
 the message is meant to be a broadcast all devices will respond to the message.
 
 This is what we will try to simulate in this experiment.
+
+
+### Assumption
+
+The following assumptions we will be made at least for now so that address could  
+be given easily.
+
+- Less than 255 robots are there in a simulation
+- the first byte of the message specifies the sender
+- the second byte specifies the receiver
+- If we want send message to everybody then second byte is set as zero
+
+### Assignment of address
+
+We have to figure out a way to give address to all robots with out the names  
+clashing with each other. An unique variable like a primary key in sql is needed  
+Thankfully we have the robot.id a string unique to each and every robot in the  
+experiment.
+
+        robot.id --> [1,255]
+This is our goal. How do we go about it.
