@@ -84,6 +84,14 @@ clashing with each other. An unique variable like a primary key in sql is needed
 Thankfully we have the robot.id a string unique to each and every robot in the  
 experiment.
 
-    robot.id --> [1,255]
+`robot.id --> [1,255]`
 
 This is our goal. How do we go about it.
+
+### Algorithm
+```
+id = (Σ ascii(robot.id[i])*32^i)mod 251 + 1
+
+```
+
+This is the hash Algorithm we are using

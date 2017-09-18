@@ -2,7 +2,8 @@
 function init()
     -- init the index
     index = 0
-
+    id = addr(robot.id)
+    log("id "..id)
     -- set the speed of the robot to zero
     robot.wheels.set_velocity(0,0)
 end
@@ -31,4 +32,18 @@ function receive_message()
         message = robot.range_and_bearing[1].data
         log("receiver receiving: " .. message[2])
     end
+end
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+function addr(s)
+    i = 0
+    id = 0
+    for c in s:gmatch"." do
+        id = id + (string.byte(c) * math.pow(32 , i))
+        i = i + 1
+    end
+    log(id)
+    id = math.fmod(id,251) + 1
+    return id
 end
