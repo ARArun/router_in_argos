@@ -90,8 +90,17 @@ This is our goal. How do we go about it.
 
 ### Algorithm
 ```
-id = (Σ ascii(robot.id[i])*32^i)mod 251 + 1
+id = (Σ ascii(robot.id[i])*2^i)mod 251 + 1
 
 ```
 
-This is the hash Algorithm we are using
+This is the hash Algorithm we are using. where 'i' is the index starting from zero
+This must give us ids from 1 to 251. This is less than what we imagined [1,255]  
+But here 251 is a prime number using which we lose collisions and get better  
+distribution by mearely losing 4 key values.
+
+Now that the major concern of addressing is done. We have to decide how  
+communication works.
+
+##Challenge
+### Can more than one message be passed by the eye-bot in one step cycle
