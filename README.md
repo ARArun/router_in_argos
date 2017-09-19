@@ -102,5 +102,5 @@ distribution by mearely losing 4 key values.
 Now that the major concern of addressing is done. We have to decide how  
 communication works.
 
-##Challenge
+## Challenge
 ### Can more than one message be passed by the eye-bot in one step cycle
