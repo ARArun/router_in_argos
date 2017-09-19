@@ -5,6 +5,7 @@
 
 1. Ip-like manipulation.
     1. We can only manage a switch not a router
+2. Designing Message protocol
 
 ## Message
 
@@ -101,6 +102,18 @@ distribution by mearely losing 4 key values.
 
 Now that the major concern of addressing is done. We have to decide how  
 communication works.
+
+## Step 2: Message protocol
+
+As we have come to a decision with respect to addressing. The next thing we want  
+to come to a decision is message protocol. As we have discussed earlier a message  
+has 10 bytes. In the significance of each byte is discusses
+
+byte no.    |significance
+--------------------------
+1           | address of the sender
+2           | address of the receiver/
+                if it is zero then it means the message is a broadcast
 
 ## Challenge
 ### Can more than one message be passed by the eye-bot in one step cycle
